@@ -509,26 +509,4 @@ a {
     transform: rotateY(180deg) translate(-30%, -50%); /* Изменил значение для выравнивания правой кнопки */
 }
 
-@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
-#container {
-  position: relative;
-  margin: auto;
-  width: 100vw;
-  height: 100vh;
-}
-
-#text1,
-#text2 {
-    position: absolute;
-    bottom: 200;
-    width: 100%;
-
-    font-family: "Raleway", sans-serif;
-    font-size: 80pt;
-
-    text-align: center;
-
-    user-select: none;
-
-}
 
