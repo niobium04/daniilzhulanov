@@ -1,0 +1,512 @@
+body {
+    margin: 0;
+    background-color: #222222;
+}
+
+html {
+  height: 100%;
+}
+
+.word {
+  position: absolute;
+  top: calc(50% - 40px);
+  left: 20px;
+  color: white;
+  font: 700 normal 2.5em 'Comfortaa Regular', sans-serif;
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+}
+
+.btn {
+  margin-top: 100px;
+}
+
+.intro {
+    font-family: "Comfortaa Regular", sans-serif;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-left: 20px;
+    line-height: 1.2;
+}
+
+
+.intro p {
+    text-align: left;
+    font-size: 22px;
+}
+
+.intro h1 {
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.intro h2 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+:root {
+    --dark-blue: #222;
+    --green: #90feb5;
+    --action-color: var(--green);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  
+  .button {
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--dark-blue);
+    border: none;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    text-decoration: none;
+    user-select: none;
+    letter-spacing: 1px;
+    color: white;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    transition: all 0.1s ease-out;
+  }
+  
+  .button:hover {
+    background-color: var(--action-color);
+    color: #fff;
+  }
+  
+  .button:active {
+    transform: scale(0.95);
+  }
+  
+  .button--bubble {
+    position: relative;
+    z-index: 2;
+    color: white;
+    background: none;
+  }
+  
+  .button--bubble:hover {
+    background: none;
+  }
+  
+  .button--bubble:hover + .button--bubble__effect-container .circle {
+    background: darken(var(--action-color), 15%);
+  }
+  
+  .button--bubble:hover + .button--bubble__effect-container .button {
+    background: darken(var(--action-color), 15%);
+  }
+  
+  .button--bubble:active + .button--bubble__effect-container {
+    transform: scale(0.95);
+  }
+  
+  .button--bubble__container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .button--bubble__container .effect-button {
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    top: 50%;
+    left: 25%;
+    z-index: 1;
+    transform: translateY(-50%);
+    background: var(--dark-blue);
+    transition: background 0.1s ease-out;
+  }
+  
+  .button--bubble__effect-container {
+    position: absolute;
+    display: block;
+    width: 200%;
+    height: 400%;
+    top: -150%;
+    left: -50%;
+    -webkit-filter: url("#goo");
+    filter: url("#goo");
+    transition: all 0.1s ease-out;
+    pointer-events: none;
+  }
+  
+  .button--bubble__effect-container .circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    background: var(--dark-blue);
+    transition: background 0.1s ease-out;
+  }
+  
+  .button--bubble__effect-container .circle.top-left {
+    top: 40%;
+    left: 27%;
+  }
+  
+  .button--bubble__effect-container .circle.bottom-right {
+    bottom: 40%;
+    right: 27%;
+  }
+  
+  .goo {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  
+  
+  .button--bubble__container {
+    top: 50%;
+    margin-top: -25px;
+  }
+  
+  @keyframes hue-rotate {
+    from {
+      -webkit-filter: hue-rotate(0);
+      -moz-filter: hue-rotate(0);
+      -ms-filter: hue-rotate(0);
+      filter: hue-rotate(0);
+    }
+    to {
+      -webkit-filter: hue-rotate(360deg);
+      -moz-filter: hue-rotate(360deg);
+      -ms-filter: hue-rotate(360deg);
+      filter: hue-rotate(360deg);
+    }
+  }
+
+
+  * {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(https://images.pexels.com/photos/2166927/pexels-photo-2166927.jpeg?cs=srgb&dl=animal-aquarium-aquatic-2166927.jpg&fm=jpg)
+      no-repeat center center/cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a {
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  color: #f4f4f4;
+  text-transform: uppercase;
+}
+
+.btn {
+  text-decoration: none;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(146, 148, 248, 0.4),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #f0671d;
+    --color-2: #34b7ef;
+    --color-3: #e67f7d;
+  }
+  
+  .title-word-2 {
+    --color-1: #f5b52b;
+    --color-2: #46decc;
+    --color-3: #3699a0;
+  }
+  
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  .container {
+    display: grid;
+    place-items: center;  
+    text-align: center;
+    height: 100vh
+  }
+  
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8.5vw;
+    text-transform: uppercase;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Comfortaa Regular", sans-serif;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  .js-slider {
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+
+  }
+  .js-slider_item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 3rem;
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: right center;
+    transform: translate3d(0%, 0%, 0) rotateY(30deg) scaleX(0.95);
+    transition: all 1s ease,transform 1s cubic-bezier(0.43, 0.28, 0.51, 1);
+  }
+  #s-1:checked ~ .js-slider .js-slider_item.img-1,
+  #s-2:checked ~ .js-slider .js-slider_item.img-2,
+  #s-3:checked ~ .js-slider .js-slider_item.img-3 {
+    opacity: 1;
+    visibility: visible;
+    transform-origin: left center;
+    transform: translate3d(0, 0, 0) rotateY(0deg) scaleX(1);
+  }
+  .js-slider_img {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+  }
+  .c-img-w-full {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  .c-img-h-full {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  figcaption {
+    display: block;
+  }
+
+  .wo-h3 .c-label, 
+.wo-h3 .view-sm {
+  color: white;
+  font-family: "Comfortaa Regular", sans-serif;
+}
+
+
+
+  .wo-h3 {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e60012;
+    color: white;
+    font-family: "Comfortaa Regular", sans-serif;
+  }
+  .c-label {
+    display: inline-block;
+    color: white;
+    background-color: rgba(223, 9, 23, 0.9);
+    line-height: 1;
+    padding: 0.5em 0.9em;
+    margin-right: 0.5em;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .view-sm {
+    display: none;
+    color: white;
+  }
+  
+
+  .js-slider_nav {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    transform: translate3d(0, -30%, 0);
+  }
+  .js-slider_nav_item.prev {
+    left: 0;
+  }
+  .js-slider_nav_item.next {
+    right: 0;
+    transform: rotateY(180deg);
+  }
+  .js-slider_nav_item {
+    position: absolute;
+    display: none;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #e60012;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .js-slider_nav_item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 1rem;
+    top: 55%;
+    width: 1rem;
+    height: 1px;
+    background-color: #e60012;
+    transform-origin: left bottom;
+    transform: translate3d(0, -50%, 0) rotate(-45deg);
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .js-slider_nav_item:hover {
+     transform: translate3d(-30%, 0, 0);
+  }
+  .js-slider_nav_item.next:hover {
+     transform: rotateY(180deg) translate3d(-30%, 0, 0);
+  }
+  .js-slider_nav_item:hover:before {
+    transform: translate3d(0, -50%, 0) rotate(-30deg);
+  }
+  .js-slider_nav_item:after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 2rem;
+    height: 1px;
+    background-color: #e60012;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  #s-1:checked ~ .js-slider .js-slider_nav .s-nav-1,
+  #s-2:checked ~ .js-slider .js-slider_nav .s-nav-2,
+  #s-3:checked ~ .js-slider .js-slider_nav .s-nav-3 {
+    display: block;
+  }
+  .js-slider_indicator {
+    position: absolute;
+    left: 0;
+    top: 63%;
+    width: 100%;
+    text-align: center;
+  }
+  .js-slider-indi {
+    position: relative;
+    display: inline-block;
+    padding: 2rem;
+    cursor: pointer;
+  }
+  .js-slider-indi:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background: #e60012;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  .js-slider-indi:hover:after {
+    transform: translate3d(-50%, -50%, 0) scale(1.5);
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  #s-1:checked ~ .js-slider .js-slider_indicator .indi-1:after,
+  #s-2:checked ~ .js-slider .js-slider_indicator .indi-2:after,
+  #s-3:checked ~ .js-slider .js-slider_indicator .indi-3:after {
+    transform: translate3d(-50%, -50%, 0) scale(2.5);
+  }
+  .js-slider-indi {
+    position: relative;
+    bottom: 1.5rem; /* Поднимаем на 1.5 rem */
+  }
+  
+  
+  .js-slider_nav_item {
+    top: 50%;
+    transform: translate(-40%, -50%); /* Изменил значение для выравнивания левой кнопки */
+    left: 9%; /* Изменил значение для выравнивания левой кнопки */
+}
+  .js-slider_nav_item.next {
+    right: -1%;
+    left: auto; /* Добавил эту строку для выравнивания правой кнопки */
+    transform: rotateY(180deg) translate(-30%, -50%); /* Изменил значение для выравнивания правой кнопки */
+}
+
+
